@@ -25,7 +25,7 @@ class AuthAction {
                 }
 
             } catch (e) {
-                console.log(e.response.data.message)
+                
             }
         }
     }
@@ -40,7 +40,7 @@ class AuthAction {
                             dispatch(changeLoadingAuth(false));
                 }
             } catch(e) {
-                console.log(e.response.data.message)
+                
             } 
         }
     }
@@ -66,7 +66,7 @@ class AuthAction {
                     return dispatch(loginUser(response.data.user));
                 }
             } catch (e) {
-                console.log(e.response.data.message);
+                
             } finally {
                 dispatch(changeLoadingAuth(false))
             }
@@ -82,7 +82,7 @@ class AuthAction {
                     return dispatch(logoutUser())
                 }
             } catch(e) {
-                console.log(e)
+                
             }
         }
     }

@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-export const _API_URL = "http://localhost:5000/api";
+export const _API_URL = "https://classroom-server-k5yv.onrender.com/api";
 
 const $api = axios.create({
     withCredentials:true,
