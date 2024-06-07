@@ -30,18 +30,8 @@ const App = () => {
         return <LoadingApp/>
     }
 
-    if(!isAuth) {
+    if(isAuth) {
         return (
-            <Routes>
-                <Route path="/" element={ <LayoutAuth/>}>
-                    <Route path="/" element={<Login/>}/>
-                    <Route path="registration" element={<Registration/>}/>
-                </Route>
-            </Routes>
-        )
-    }  
-
-    return (
         <Routes>
             <Route  path="/" element={ <Layout />}>
                 <Route path='home'  element={<Home/>}/>
@@ -49,6 +39,17 @@ const App = () => {
             </Route>
         </Routes>
     )
+    }  
+
+    return (
+            <Routes>
+                <Route path="/" element={ <LayoutAuth/>}>
+                    <Route path="/" element={<Login/>}/>
+                    <Route path="registration" element={<Registration/>}/>
+                </Route>
+            </Routes>
+        )
+    
 }
 
 export default App;
